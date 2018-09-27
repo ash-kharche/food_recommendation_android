@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Food Reco</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_signup">Sign up</string>
+    <string name="title_activity_questions">Questions</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Navigation drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_name">Name</string>
+    <string name="prompt_mobile_number">Mobile number</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (4digit)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="signup_error_name">Invalid Name</string>
+    <string name="signup_error_email">Invalid Email</string>
+    <string name="signup_error_mobile">Please enter 10digit mobile number</string>
+    <string name="signup_error_password">Invalid Password length</string>
+
+    <!-- Home -->
+    <string name="search_hint">Search here...</string>
+    <string name="trending_food">Trending Food</string>
+    <string name="vegeterian">Vegeterian</string>
+    <string name="non_vegeterian">Non Vegeterian</string>
+    <string name="both">Both</string>
+    <string name="title_questions">Help us to know you more!!</string>
+    <string name="title_questions_1">What suits you?</string>
+    <string name="title_question_2">Do you have any medical condition .(This would help us to recommend user at best)</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="cholestrol">Cholestrol</string>
+    <string name="ok">Ok</string>
+    <string name="submit">Submit</string>
+
+
+</resources>
