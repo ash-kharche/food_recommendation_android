@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.android.foodreco.R;
 import com.example.android.foodreco.Utils;
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void attemptLogin() {
         if(validFields()) {
-            saveUserApi();
+            loginApi();
         }
     }
 
@@ -80,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         return password.length() > 4;
     }
 
-    private void saveUserApi() {
+    private void loginApi() {
         Utils.showProgressDialog(LoginActivity.this, false);
 
         LoginBody body = new LoginBody();
@@ -93,12 +94,14 @@ public class LoginActivity extends AppCompatActivity {
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
+                Utils.hideProgressDialog();
                 if(response.isSuccessful()) {
-                    Log.d("poo","onResponse success:  " + response.toString());
-                    Utils.hideProgressDialog();
-
+                    Intent i = new Intent(LoginActivity.this, QuestionActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(i);
+                    finish();
                 } else {
-                    Log.d("poo","onResponse error:  ");
+                    Toast.makeText(LoginActivity.this, "Please signup", Toast.LENGTH_SHORT).show();
                 }
             }
 

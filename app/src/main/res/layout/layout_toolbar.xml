@@ -3,7 +3,7 @@
     android:id="@+id/toolbar"
     style="@style/toolbar_style">
 
-    <com.bookex.widgets.TextViewCustom
+    <TextView
         android:id="@+id/toolbar_title"
         style="@style/toolbar_tv_style"
         android:text="TOOLBAR" />

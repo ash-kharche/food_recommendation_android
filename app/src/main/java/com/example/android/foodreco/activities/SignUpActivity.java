@@ -1,11 +1,13 @@
 package com.example.android.foodreco.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.android.foodreco.R;
 import com.example.android.foodreco.Utils;
@@ -83,11 +85,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private boolean isMobileValid(String mobile) {
-        return mobile.length() > 0 && mobile.length() < 11;
+        return (mobile.length() == 10);
     }
 
     private boolean isPasswordValid(String password) {
-        return password.length() > 4;
+        return password.length() >= 4;
     }
 
     private void saveUserApi() {
@@ -105,18 +107,19 @@ public class SignUpActivity extends AppCompatActivity {
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
+                Utils.hideProgressDialog();
                 if(response.isSuccessful()) {
-                    Log.d("poo","onResponse success:  " + response.toString());
-                    Utils.hideProgressDialog();
+                    Toast.makeText(SignUpActivity.this, "Please re-login again", Toast.LENGTH_SHORT).show();
 
-                } else {
-                    Log.d("poo","onResponse error:  ");
+                    Intent i = new Intent(SignUpActivity.this, LoginActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(i);
+                    finish();
                 }
             }
 
             @Override
             public void onFailure(Call<Void> call, Throwable t) {
-                Log.e("poo","onFailure  " + t);
                 Utils.hideProgressDialog();
             }
         });

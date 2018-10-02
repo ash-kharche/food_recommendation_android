@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Food Reco</string>
-    <string name="title_activity_login">Login</string>
-    <string name="title_activity_signup">Sign up</string>
-    <string name="title_activity_questions">Questions</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">LOGIN</string>
+    <string name="title_activity_signup">SIGN UP</string>
+    <string name="title_activity_questions">QUESTIONS</string>
+    <string name="title_activity_main">HOME</string>
 
     <!-- Navigation drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -17,7 +17,7 @@
     <string name="prompt_name">Name</string>
     <string name="prompt_mobile_number">Mobile number</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (4digit)</string>
+    <string name="prompt_password">Password </string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -42,6 +42,9 @@
     <string name="cholestrol">Cholestrol</string>
     <string name="ok">Ok</string>
     <string name="submit">Submit</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

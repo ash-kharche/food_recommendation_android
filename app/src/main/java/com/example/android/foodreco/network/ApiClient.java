@@ -27,8 +27,8 @@ public class ApiClient {
 
             OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
-            builder.connectTimeout(10, TimeUnit.SECONDS);
-            builder.readTimeout(15, TimeUnit.SECONDS);
+            builder.connectTimeout(30, TimeUnit.SECONDS);
+            builder.readTimeout(30, TimeUnit.SECONDS);
             builder.addInterceptor(loggingInterceptor);
 
             OkHttpClient okHttpClient = builder.build();

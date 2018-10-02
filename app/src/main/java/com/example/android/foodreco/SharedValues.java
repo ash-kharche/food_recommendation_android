@@ -18,27 +18,4 @@ public class SharedValues {
         editor.putString(key, value);
         editor.apply();
     }
-
-    /*
-    public static void resetTripValues(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putString(Constants.TRIP_ID, null);
-        editor.putString(Constants.TRIP_IS_ACCEPTED, null);
-
-        editor.apply();
-    }
-
-    public static void resetAllValues(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putString(Constants.DRIVER_ID, null);
-        editor.putString(Constants.TRIP_ID, null);
-        editor.putString(Constants.TRIP_IS_ACCEPTED, null);
-
-        editor.apply();
-    }
-    */
 }

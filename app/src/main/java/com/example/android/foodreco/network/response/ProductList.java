@@ -5,14 +5,14 @@ import java.util.List;
 public class ProductList {
 
     List<Product> trending;
-    List<Category> categories;
+    List<Collections> categories;
     List<Product> recommendation;
 
     public List<Product> getTrending() {
         return trending;
     }
 
-    public List<Category> getCategories() {
+    public List<Collections> getCategories() {
         return categories;
     }
 

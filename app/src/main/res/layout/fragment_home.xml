@@ -10,13 +10,8 @@
         android:id="@+id/et_searchbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:hint="@string/search_hint" />
-
-    <TextView
-        android:id="@+id/tv_trending"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/trending_food" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview_collections"

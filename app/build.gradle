@@ -41,7 +41,10 @@ dependencies {
             "com.android.support:cardview-v7:$supportVersion",
             "com.android.support:appcompat-v7:$supportVersion",
             "com.android.support:design:$supportVersion",
-            "com.android.support:support-v13:$supportVersion"
+            "com.android.support:support-v13:$supportVersion",
+            "com.android.support:support-v4:$supportVersion",
+            "com.android.support:design:$supportVersion",
+            "com.android.support:recyclerview-v7:$supportVersion"
 
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion",
             "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
