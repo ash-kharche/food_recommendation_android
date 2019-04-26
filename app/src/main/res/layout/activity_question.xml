@@ -1,86 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/screen_margin"
-        android:orientation="vertical"
-        android:padding="@dimen/screen_padding">
+        android:layout_height="match_parent">
 
-        <TextView
-            style="@style/TextView.Title"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="LET's KNOW YOU MORE..." />
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/title_questions" />
+            android:layout_above="@+id/bt_submit"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white">
 
-        <TextView
-            style="@style/TextView.Title"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/title_questions_1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TextView
+                    style="@style/TextView.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/title_questions" />
 
-            <RadioButton
-                android:id="@+id/veg"
-                style="@style/TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/vegeterian" />
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:text="What food do your prefer:" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <RadioButton
-                android:id="@+id/nonveg"
-                style="@style/TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/non_vegeterian" />
+                    <RadioButton
+                        android:id="@+id/rb_veg"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vegeterian" />
 
-            <RadioButton
-                android:id="@+id/both"
-                style="@style/TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/both" />
-        </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/rb_nonveg"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/non_vegeterian" />
 
-        <TextView
-            style="@style/TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/title_question_2" />
+                </RadioGroup>
 
-        <CheckBox
-            android:id="@+id/cb_diabetes"
-            style="@style/TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/diabetes" />
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/title_question_2" />
 
-        <CheckBox
-            android:id="@+id/cb_cholestrol"
-            style="@style/TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/cholestrol" />
+                <CheckBox
+                    android:id="@+id/cb_diabetes"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/diabetes" />
+
+                <CheckBox
+                    android:id="@+id/cb_cholestrol"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cholestrol" />
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Do you fall in anyone of the below age group:" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_kid"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kid" />
+
+                    <RadioButton
+                        android:id="@+id/rb_senior"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Senior" />
+
+                    <RadioButton
+                        android:id="@+id/rb_none"
+                        style="@style/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="None of the above" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+        </ScrollView>
 
         <Button
             android:id="@+id/bt_submit"
-            style="@style/Button"
-            android:layout_marginTop="16dp"
-            android:text="@string/submit" />
-    </LinearLayout>
-
-</ScrollView>
+            style="@style/ButtonPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Submit" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CardView.Small"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/window_background"/>
+
+        <ImageView
+            android:id="@+id/iv_foodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_image"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_4"
+            android:src="@drawable/veg_redesign" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextView.Black.Medium"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/iv_image"
+            android:layout_toLeftOf="@+id/iv_foodType"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="TITLE"
+            android:textAllCaps="true" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextView.Black.Large.Bold"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:padding="5dp"
+            android:text="Rs 300"
+            android:textColor="@color/main_color" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            style="@style/TextView.White.Small.Bold"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rect_rounded_corners"
+            android:drawableLeft="@drawable/ic_white_star"
+            android:drawablePadding="5dp"
+            android:text="0.0"
+            android:textStyle="bold" />
+
+        <include
+            layout="@layout/layout_add_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_foodType"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/TextView.Grey.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_price"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:text="DESCRIPTION"
+            android:textColor="@color/grey" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

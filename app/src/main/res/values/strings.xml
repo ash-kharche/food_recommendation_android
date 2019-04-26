@@ -1,50 +1,84 @@
 <resources>
-    <string name="app_name">Food Reco</string>
-    <string name="title_activity_login">LOGIN</string>
-    <string name="title_activity_signup">SIGN UP</string>
-    <string name="title_activity_questions">QUESTIONS</string>
-    <string name="title_activity_main">HOME</string>
+
+    <string name="app_name">Food Recommendation</string>
+    <string name="rupee_symbol">\u20B9 </string>
+
+    <string name="title_activity_main">Food Reco</string>
 
     <!-- Navigation drawer -->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <!-- Strings related to login -->
     <string name="prompt_name">Name</string>
-    <string name="prompt_mobile_number">Mobile number</string>
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password </string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="signup_error_name">Invalid Name</string>
-    <string name="signup_error_email">Invalid Email</string>
-    <string name="signup_error_mobile">Please enter 10digit mobile number</string>
-    <string name="signup_error_password">Invalid Password length</string>
+    <string name="prompt_mobile">Mobile</string>
 
     <!-- Home -->
-    <string name="search_hint">Search here...</string>
-    <string name="trending_food">Trending Food</string>
+
+    <string name="openDrawer">OPEN</string>
+    <string name="closeDrawer">CLOSE</string>
+
+    <!--Cart Customization & Cart Screen Constants -->
+    <string name="checkout">CHECKOUT</string>
+    <string name="place_order">PLACE ORDER</string>
+
+    <!--Customization screen-->
+
+    <!-- Fragment_CreateNewAddress -->
+
+    <!-- ProductDetailActivity -->
+
+    <!-- recycler_view_item_addresses -->
+
+    <!-- ToolBar Titles-->
+    <string name="error_no_response">Sorry, something went wrong!</string>
+
+
+    <string name="dismiss">Dismiss</string>
+
+    <!--Location -->
+
+    <!--Activity_ManualSelection -->
+
+
+    <!-- Collection Screen -->
+
+    <!--Login -->
+
+    <!-- Checkout -->
+
+
+    <!-- Search Activity -->
+
+
+    <!-- Checkout -->
+
+    <!-- Collection Screen -->
+
+
+    <!-- Order Feedback -->
+
+
+    <string name="cancel">Cancel</string>
+
+    <!-- Coupon -->
+
     <string name="vegeterian">Vegeterian</string>
     <string name="non_vegeterian">Non Vegeterian</string>
-    <string name="both">Both</string>
     <string name="title_questions">Help us to know you more!!</string>
-    <string name="title_questions_1">What suits you?</string>
     <string name="title_question_2">Do you have any medical condition .(This would help us to recommend user at best)</string>
     <string name="diabetes">Diabetes</string>
     <string name="cholestrol">Cholestrol</string>
-    <string name="ok">Ok</string>
-    <string name="submit">Submit</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="logout_title">Logout?</string>
+    <string name="logout_message">Are you sure you wanna logout?</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="signup_error_email">Please enter valid email</string>
+    <string name="signup_error_password">Invalid Password length</string>
+    <string name="cool">Cool!!</string>
+    <string name="profile_saved_title">Profile Done</string>
+    <string name="profile_saved_message">Your details are saved with us...</string>
+    <string name="rate_order">RATE ORDER</string>
 
 </resources>

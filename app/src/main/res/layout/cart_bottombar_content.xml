@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart_bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_centerVertical="true"
+    android:layout_gravity="bottom"
+    android:background="@color/transparent_black"
+    android:gravity="bottom"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/cart_items"
+        style="@style/TextView.White.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_cart"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:text="98 items in cart" />
+
+    <TextView
+        android:id="@+id/cart_amount"
+        style="@style/TextView.White.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/ic_white_rightarrow"
+        android:drawablePadding="10dp"
+        android:paddingRight="10dp"
+        android:text="PAY Rs. 0 " />
+</RelativeLayout>

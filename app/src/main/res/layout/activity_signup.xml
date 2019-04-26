@@ -1,106 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="@dimen/screen_margin"
-    android:background="@color/background_color"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="@dimen/screen_padding">
+    android:layout_height="match_parent">
 
-    <!-- Login progress -->
-    <ProgressBar
-        android:id="@+id/login_progress"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="PROFILE" />
+
+    <Button
+        android:id="@+id/bt_save"
+        style="@style/ButtonPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_color"
+        android:text="SAVE" />
 
     <ScrollView
-        android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_save"
+        android:layout_below="@+id/toolbar"
+        android:scrollbars="vertical">
 
         <LinearLayout
-            android:id="@+id/email_login_form"
+            android:id="@+id/apn_iv_profilePic_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_below="@+id/ap_tb_toolbar"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/round_face_black_48" />
+
+            <TextView
+                android:id="@+id/tv_name_text"
+                style="@style/TextView.Grey.Medium"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher" />
+                android:layout_below="@id/apn_iv_profilePic_layout"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:text="Name" />
 
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/tv_name"
+                style="@style/TextView.White.ExtraLarge"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_below="@id/tv_name_text"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:gravity="center_vertical"
+                android:nextFocusDown="@id/tv_email"
+                android:nextFocusForward="@id/tv_email"
+                android:textColor="@color/black"
+                tools:text="Aishwarya" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/tv_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_name"
-                    android:inputType="text"
-                    android:singleLine="true" />
+            <TextView
+                android:id="@+id/tv_email_text"
+                style="@style/TextView.Grey.Medium"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:text="Email" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/tv_email"
+                style="@style/TextView.White.ExtraLarge"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_below="@id/tv_email_text"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:gravity="center_vertical"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/tv_mobile"
+                android:nextFocusForward="@id/tv_mobile"
+                android:textColor="@color/black"
+                tools:text="ash@gmail.com" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/tv_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_email"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true" />
+            <TextView
+                android:id="@+id/tv_mobile_text"
+                style="@style/TextView.Grey.Medium"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_email"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:text="Mobile" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/tv_mobile"
+                style="@style/TextView.White.ExtraLarge"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_below="@id/tv_mobile_text"
+                android:digits="0123456789"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:textColor="@color/black"
+                tools:text="287923829" />
 
-                <AutoCompleteTextView
-                    android:id="@+id/tv_mobile_number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:digits="0123456789"
-                    android:hint="@string/prompt_mobile_number"
-                    android:inputType="number"
-                    android:singleLine="true" />
+            <TextView
+                style="@style/TextView.Grey.Medium"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_email"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:text="Password" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/tv_password"
+                style="@style/TextView.White.ExtraLarge"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <AutoCompleteTextView
-                    android:id="@+id/tv_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="6"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/bt_sign_up"
-                style="@style/Button"
-                android:layout_marginTop="16dp"
-                android:text="Signup" />
+                android:layout_below="@id/tv_mobile_text"
+                android:gravity="center_vertical"
+                android:inputType="textVisiblePassword"
+                android:textColor="@color/black"
+                tools:text="password" />
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>
+

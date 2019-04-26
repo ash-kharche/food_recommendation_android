@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CardViewStyle"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <com.done.recommendation.utils.widgets.SqaureImageView
+            android:id="@+id/lci_iv_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/menu_default" />
+
+        <include
+            android:id="@+id/layout_add_delete"
+            layout="@layout/layout_add_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextView.Black.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/layout_add_delete"
+            android:layout_toRightOf="@+id/lci_iv_image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text="Simply Veg" />
+
+        <TextView
+            android:id="@+id/tvItemCost"
+            style="@style/TextView.Grey.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/lci_iv_image"
+            android:text="10000"
+            android:textColor="@color/secondary_text_color" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
